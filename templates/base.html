@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSC2031</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<body>
+
+    <style>
+    .table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+    <section>
+        <div class="section">
+            <div class="hero is-dark has-text-centered">
+                <h1 class="title">Lost Bond Project</h1>
+            </div>
+            <nav class="navbar is-light" role="navigation">
+                <div class="container">
+                    <div id="navExampleTransparentExample" class="navbar-menu">
+                        <a class="navbar-item">
+                            <img src="../static/img/Logo_sml.png" alt="Logo">
+                        </a>
+                       <div class="navbar-start">
+                            <a href="Home" class="navbar-item">
+                               Home
+                            </a>
+                            <a href="Buy" class="navbar-item">
+                                Buy
+                            </a>
+                           <a href="Donate" class="navbar-item">
+                                            Donate
+                           </a>
+                           <hr class="navbar-divider">
+                           <div class="navbar-item has-dropdown is-hoverable">
+                               <a class="navbar-link" > More </a>
+                               <div class="navbar-dropdown">
+                                   <a href="About Us" class="navbar-item">
+                                            About Us
+                                    </a>
+                                   <a href="Contact Us" class="navbar-item">
+                                            Contact Us
+                                    </a>
+                               </div>
+                           </div>
+                       </div>
+                        <div class="navbar-end">
+                                <a href="Instagram" class="navbar-item">
+                                    Instagram
+                                </a>
+                                <a href="Young Minds UK" class="navbar-item">
+                                    Young Minds UK
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="section has-text-centered">
+                {% block content %}
+               {% endblock %}
+        </div>
+    </section>
+    <div>
+    </div>
+</body>
+
+</html>
