@@ -1,0 +1,43 @@
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/chomsky" type="text/css"/>
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <div class="splash">
+      <div class="splash_header">
+          <h1 id="title"></h1>
+            <script>
+            var i = 0;
+            var txt = 'Lost Bond.';
+            var speed = 50;
+
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("title").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            window.onload=typeWriter;
+            </script>
+      </div>
+      <div class="splash_svg">
+        <svg width="100%" height="100%">
+            <rect width="100%" height="100%" > </rect>
+        </svg>
+      </div>
+      <div class="splash_minimize">
+        <svg width="100%" height="100%">
+          <rect width="100%" height="100%" > </rect>
+        </svg>
+      </div>
+    </div>
+    <div class="text">
+        <a href="{{ url_for('/index') }}" class="button" >
+            Enter
+        </a>
+    </div>
+
+</body>
+
+{% endblock %}
