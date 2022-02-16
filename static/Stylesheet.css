@@ -37,7 +37,7 @@ body{
   animation: type .3s steps(60, end) 3.7s;
 }
 
-.text button {
+.text button{
   background: white;
   color: black;
   border: 1px solid white;
