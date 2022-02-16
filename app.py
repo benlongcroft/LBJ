@@ -32,8 +32,13 @@ talisman = Talisman(app, content_security_policy=csp)
 
 # HOME PAGE VIEW
 @app.route('/')
-def index():
+def start():
     return render_template('splash.html')
+
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
 
 
 @app.errorhandler(400)
