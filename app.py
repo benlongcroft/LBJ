@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-from datetime import timedelta
-from flask_talisman import Talisman
 
 app = Flask(__name__)
 
@@ -8,7 +6,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '5jE6y9MTmkCGqWRaBF7fz4'
 app.config['RECAPTCHA_PUBLIC_KEY'] = "6LekrNocAAAAAJmeku5jE6y9MTmkCGqWRaBF7fz4"
 app.config['RECAPTCHA_PRIVATE_KEY'] = "6LekrNocAAAAAPGHhArtwxjfv1p-TC1C1VNGmQCO"
-
 
 
 # HOME PAGE VIEW
