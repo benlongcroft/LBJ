@@ -5,29 +5,10 @@ from flask_talisman import Talisman
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=45)
 app.config['SECRET_KEY'] = '5jE6y9MTmkCGqWRaBF7fz4'
 app.config['RECAPTCHA_PUBLIC_KEY'] = "6LekrNocAAAAAJmeku5jE6y9MTmkCGqWRaBF7fz4"
 app.config['RECAPTCHA_PRIVATE_KEY'] = "6LekrNocAAAAAPGHhArtwxjfv1p-TC1C1VNGmQCO"
 
-csp = {
-    'default-src': [
-        '\'self\'',
-        'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'
-    ],
-    'script-src': [
-        '\'self\'',
-        '\'unsafe-inline\''
-        'https://www.google.com/recaptcha/',
-        'https://www.gstatic.com/recaptcha/'
-    ],
-    'frame-src': [
-        'https://www.google.com/recaptcha/',
-        'https://recaptcha.google.com/recaptcha/'
-    ]
-}
-
-talisman = Talisman(app, content_security_policy=csp)
 
 
 # HOME PAGE VIEW
