@@ -1,43 +1,51 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lost Bond Project</title>
+    <link rel="stylesheet" href="../static/Stylesheet.css" />
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon_icons/favicon.ico"/>
+</head>
 
-{% block content %}
-<body>
-    <div class="splash">
-      <div class="splash_header">
-          <h1 id="title"></h1>
-            <script>
-            var i = 0;
-            var txt = 'Lost Bond.';
-            var speed = 200;
+<html>
+    <body>
+        <div class="splash">
+          <div class="splash_header">
+              <h1 id="title"></h1>
+                <script>
+                var i = 0;
+                var txt = 'Lost Bond.';
+                var speed = 200;
 
-            function typeWriter() {
-              if (i < txt.length) {
-                document.getElementById("title").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-              }
-            }
-            window.onload=typeWriter;
-            </script>
-      </div>
-      <div class="splash_svg">
-        <svg width="100%" height="100%">
-            <rect width="100%" height="100%" > </rect>
-        </svg>
-      </div>
-      <div class="splash_minimize">
-        <svg width="100%" height="100%">
-          <rect width="100%" height="100%" > </rect>
-        </svg>
-      </div>
-    </div>
+                function typeWriter() {
+                  if (i < txt.length) {
+                    document.getElementById("title").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                  }
+                }
+                window.onload=typeWriter;
+                </script>
+          </div>
+          <div class="splash_svg">
+            <svg width="100%" height="100%">
+                <rect width="100%" height="100%" > </rect>
+            </svg>
+          </div>
+          <div class="splash_minimize">
+            <svg width="100%" height="100%">
+              <rect width="100%" height="100%" > </rect>
+            </svg>
+          </div>
+        </div>
 
-    <div class="text">
-        <a href="{{ url_for('index') }}">
-            <button type="button"> Enter </button>
-        </a>
-    </div>
+        <div class="text">
+            <a href="{{ url_for('index') }}">
+                <button type="button"> Enter </button>
+            </a>
+        </div>
 
-</body>
-
-{% endblock %}
+    </body>
+</html>

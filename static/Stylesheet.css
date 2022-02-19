@@ -10,13 +10,16 @@ body{
 }
 
 .navbar-default {
-    padding: 15px;
+    height: 70px;
+    display: -moz-inline-block;
     background-color: white;
     color: black;
+    overflow: hidden;
 }
 
 .navbar-item {
-  padding: 15px;
+  float: left;
+  padding: 20px;
   text-transform: uppercase;
   font-weight: bold;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -26,14 +29,26 @@ body{
   color: black;
 }
 
+.navbar-item-right {
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: black;
+  float: right;
+}
+
 .navbar-item-home {
-  padding: 15px 25px;
-  text-align: center;
+  padding: 15px;
   font-family: "ChomskyRegular", serif;
   font-size: 30px;
   letter-spacing: 4px;
   text-decoration: none;
   color: black;
+  float: left;
 }
 
 .navbar-item:hover {
@@ -42,6 +57,11 @@ body{
   border: 3px solid white;
 }
 
+.navbar-item-right:hover {
+  background: black;
+  color: white;
+  border: 3px solid white;
+}
 
 .text {
   opacity: 0;
