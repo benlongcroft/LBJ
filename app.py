@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from Gallery.views import get_image_set
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def start():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', get_image_set=get_image_set)
 
 
 @app.route('/about')

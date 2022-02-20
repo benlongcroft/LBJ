@@ -1,19 +1,25 @@
 @font-face {
 	font-family: 'ChomskyRegular';
-	src: url('../static/Chomsky.otf');
+	src: url('Chomsky.otf');
 	src:
 		local('ChomskyRegular'),
 		local('ChomskyRegular'),
-		url('../static/Chomsky.otf')
+		url('Chomsky.otf')
 		format('opentype') }
+
 
 /* Index H1 Title */
 h1{
     text-align: center;
     font-family: 'ChomskyRegular';
+    position: relative;
+    font-size: 40px;
     color: white;
+    overflow: auto;
+    display: -moz-inline-box;
 }
 
+/*Index H2 Title*/
 h2{
   font-family: Montserrat, sans-serif;
   font-size: 25px;
@@ -25,6 +31,7 @@ h2{
   text-decoration-line: underline;
 }
 
+/*Paragraph Text*/
 p {
   font-family: Montserrat, sans-serif;
   font-size: 15px;
@@ -40,6 +47,16 @@ body{
     background-color: black;
 }
 
+
+/*White Div for EMPHASIS*/
+/*.emphasis div{*/
+/*    background: white;*/
+/*    color: white;*/
+/*    !*height: 300px;*!*/
+/*}*/
+
+
+/*Navbar Stuff*/
 .navbar-default {
     height: 70px;
     display: -moz-inline-block;
@@ -93,6 +110,49 @@ body{
   color: white;
   border: 3px solid white;
 }
+
+/*Gallery stuff for homepage*/
+
+div.gallery_wrapper{
+  background-color: white;
+  /*position: fixed;*/
+  display: flex;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+
+div.gallery {
+  text-align: center;
+  display: inline-block;
+  margin: 10px auto;
+  height: 300px;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 3px solid black;
+}
+
+div.gallery img {
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+div.desc {
+  padding: 10px;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: black;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+
+/*Splash Screen Shit!!!
+  Don't touch me!
+  :~) */
 
 .text {
   opacity: 0;
