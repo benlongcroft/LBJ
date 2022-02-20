@@ -19,6 +19,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+
 @app.errorhandler(400)
 def bad_request(error):
     return render_template('error/400.html'), 400

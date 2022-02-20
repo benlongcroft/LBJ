@@ -1,10 +1,41 @@
-@import url('https://fontlibrary.org//face/chomsky');
+@font-face {
+	font-family: 'ChomskyRegular';
+	src: url('../static/Chomsky.otf');
+	src:
+		local('ChomskyRegular'),
+		local('ChomskyRegular'),
+		url('../static/Chomsky.otf')
+		format('opentype') }
 
 /* Index H1 Title */
 h1{
+    text-align: center;
     font-family: 'ChomskyRegular';
     color: white;
 }
+
+h2{
+  font-family: Montserrat, sans-serif;
+  font-size: 25px;
+  color: white;
+  display: -moz-inline-box;
+  padding: 20px;
+  overflow: auto;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: white;
+  display: -moz-inline-box;
+  padding: 10px 100px;
+  overflow: auto;
+  text-align: center;
+}
+
 body{
     background-color: black;
 }
@@ -26,7 +57,7 @@ body{
   font-size: 20px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: black;
+  color: dimgray;
 }
 
 .navbar-item-right {
@@ -37,14 +68,14 @@ body{
   font-size: 20px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: black;
+  color: dimgrey;
   float: right;
 }
 
 .navbar-item-home {
-  padding: 15px;
+  padding: 10px;
   font-family: "ChomskyRegular", serif;
-  font-size: 30px;
+  font-size: 35px;
   letter-spacing: 4px;
   text-decoration: none;
   color: black;
