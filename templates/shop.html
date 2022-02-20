@@ -4,10 +4,10 @@
        <section class="shop_wrapper">
             {% with images = get_shop_images() %}
              {% for i in range(15) %}
-            <div class="gal_item">
-                <div class="gallery">
+            <div class="shop_div">
+                <div class="img_shop_div">
                   <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
-                    <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
+                    <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="300" height="300">
                   </a>
                 </div>
                 <div class="desc">{{ images[i]['name'] }}</div>
