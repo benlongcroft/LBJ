@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-       <div class="gallery_wrapper">
+       <section class="shop_wrapper">
             {% with images = get_shop_images() %}
-             {% for i in range(4) %}
+             {% for i in range(15) %}
             <div class="gallery">
               <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
                 <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
               </a>
-              <div class="desc">{{ images[i]['name'] }}</div>
+              <div class="desc">{{ images[i]['name'] }}
+            </div>
             </div>
             {% endfor %}
             {% endwith %}
-        </div>
+        </section>
 {% endblock %}

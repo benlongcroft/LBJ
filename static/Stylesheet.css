@@ -43,6 +43,9 @@ p {
 
 body{
     background-color: black;
+    position: relative;
+    height: auto;
+    min-height: 100% !important;
 }
 
 
@@ -103,20 +106,37 @@ body{
 }
 
 
-/*Gallery stuff for homepage*/
+/*Gallery/shop stuff*/
 
-div.gallery_wrapper{
+.shop_wrapper{
   background-color: white;
+  color: white;
+  display: table;
+  align-items: center;
+  align-self: center;
+  position: absolute;
+  overflow: -moz-scrollbars-horizontal;
+  height: auto;
+  width: 100%;
+}
+
+.gallery_wrapper{
+  background-color: white;
+  color: white;
   display: flex;
   align-items: center;
-  height: 450px;
+  align-self: center;
+  /*position: absolute;*/
+  overflow: auto;
+  height: 500px;
   width: 100%;
 }
 
 div.gallery {
   text-align: center;
   display: inline-block;
-  margin: 10px auto;
+  margin: 0 auto;
+  padding: 10px;
   height: 300px;
   width: 300px;
 }
@@ -132,7 +152,8 @@ div.gallery img {
 }
 
 div.desc {
-  padding: 10px;
+  /*margin: 0 auto;*/
+  padding-top: 20px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: white;
   color: black;
