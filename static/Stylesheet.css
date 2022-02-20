@@ -43,9 +43,9 @@ p {
 
 body{
     background-color: black;
-    position: relative;
-    height: auto;
-    min-height: 100% !important;
+    /*position: relative;*/
+    /*height: auto;*/
+    /*min-height: 100% !important;*/
 }
 
 
