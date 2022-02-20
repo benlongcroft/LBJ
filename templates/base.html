@@ -2,19 +2,19 @@
 <html lang="EN">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="/static/assets/img/favicon_icons/favicon.ico"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lost Bond Project</title>
     <link rel="stylesheet" href="../static/Stylesheet.css" />
-    <link rel="icon" type="image/x-icon" href="/static/assets/img/favicon_icons/favicon.ico"/>
 </head>
         <nav>
             <div class="navbar-default">
                     <a href={{ url_for("index") }} class="navbar-item-home">
                        Lost Bond
                     </a>
-                    <a class="navbar-item">
+                    <a href={{ url_for("shop") }} class="navbar-item">
                         Shop
                     </a>
                     <a class="navbar-item">
@@ -24,7 +24,7 @@
                         Contact Us
                     </a>
                     <a href={{ url_for("about") }} class="navbar-item-right">
-                        About
+                        Our Story
                     </a>
             </div>
         </nav>

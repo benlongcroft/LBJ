@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+<link rel="icon" type="image/icon" href="/static/assets/img/favicon_icons/favicon.ico"/>
+
 {% block content %}
     <body>
         <div>
@@ -21,32 +23,26 @@
             </p>
             <br>
         </div>
+
+        {% block head %}
+          <style>
+            .notfound {
+              background-color: gray;
+              font-size: 125%;
+            }
+          </style>
+        {% endblock %}
+
         <div class="gallery_wrapper">
             {% with images = get_image_set() %}
+             {% for i in range(4) %}
             <div class="gallery">
-              <a target="_blank" href={{ url_for('static', filename=images[0]['path']) }}>
-                <img src={{ url_for('static', filename=images[0]['path']) }} alt="LostBondImage" width="600" height="400">
+              <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
+                <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
               </a>
-              <div class="desc">{{ images[0]['name'] }}</div>
+              <div class="desc">{{ images[i]['name'] }}</div>
             </div>
-            <div class="gallery">
-              <a target="_blank" href={{ url_for('static', filename=images[1]['path']) }}>
-                <img src={{ url_for('static', filename=images[1]['path']) }} alt="LostBondImage" width="600" height="400">
-              </a>
-              <div class="desc">{{ images[1]['name'] }}</div>
-            </div>
-            <div class="gallery">
-              <a target="_blank" href={{ url_for('static', filename=images[2]['path']) }}>
-                <img src={{ url_for('static', filename=images[2]['path']) }} alt="LostBondImage" width="600" height="400">
-              </a>
-              <div class="desc">{{ images[2]['name'] }}</div>
-            </div>
-            <div class="gallery">
-              <a target="_blank" href={{ url_for('static', filename=images[3]['path']) }}>
-                <img src={{ url_for('static', filename=images[3]['path']) }} alt="LostBondImage" width="600" height="400">
-              </a>
-              <div class="desc">{{ images[3]['name'] }}</div>
-            </div>
+            {% endfor %}
             {% endwith %}
         </div>
     </body>

@@ -16,12 +16,11 @@ def get_image_set():
             continue
         used.append(num)
         img_path = files[num]
-        print(img_path.split(".")[-1])
         if img_path == ".DS_Store":
             continue
         p = os.path.join(assets_path, img_path)
-        print(p)
-        image_set.append({'path': p, 'name': get_image_name(p)})
+        image_set.append({'path': p, 'name': get_image_name(p), 'description': None})
+        # TODO: implement this so that description gets shop metadata
     return image_set
 
 

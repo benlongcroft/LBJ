@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from Gallery.views import get_image_set
+from Shop.views import get_shop_image
 
 app = Flask(__name__)
 
@@ -23,6 +24,11 @@ def index():
 @app.route('/about')
 def about():
     return render_template("about.html")
+
+
+@app.route('/shop')
+def shop():
+    return render_template("shop.html", get_shop_images=get_shop_image)
 
 
 @app.errorhandler(400)
