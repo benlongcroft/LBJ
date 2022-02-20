@@ -37,9 +37,7 @@ p {
   font-size: 15px;
   letter-spacing: 3px;
   color: white;
-  display: -moz-inline-box;
-  padding: 10px 100px;
-  overflow: auto;
+  margin: 10px;
   text-align: center;
 }
 
@@ -47,13 +45,6 @@ body{
     background-color: black;
 }
 
-
-/*White Div for EMPHASIS*/
-/*.emphasis div{*/
-/*    background: white;*/
-/*    color: white;*/
-/*    !*height: 300px;*!*/
-/*}*/
 
 
 /*Navbar Stuff*/
@@ -115,10 +106,9 @@ body{
 
 div.gallery_wrapper{
   background-color: white;
-  /*position: fixed;*/
   display: flex;
   align-items: center;
-  height: 500px;
+  height: 450px;
   width: 100%;
 }
 
