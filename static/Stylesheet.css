@@ -124,9 +124,8 @@ body{
   background-color: white;
   color: white;
   display: flex;
-  align-items: center;
-  align-self: center;
-  /*position: absolute;*/
+  justify-content: center;
+  position: absolute;
   overflow: auto;
   height: 500px;
   width: 100%;
@@ -134,15 +133,20 @@ body{
 
 div.gallery {
   text-align: center;
-  display: inline-block;
-  margin: 0 auto;
   padding: 10px;
   height: 300px;
   width: 300px;
 }
 
-div.gallery:hover {
-  border: 3px solid black;
+div.gal_item{
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 30px;
+  position: relative;
+}
+
+div.gal_item:hover {
+  border: 10px solid black;
 }
 
 div.gallery img {
@@ -153,6 +157,7 @@ div.gallery img {
 
 div.desc {
   /*margin: 0 auto;*/
+  /*display: */
   padding-top: 20px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: white;

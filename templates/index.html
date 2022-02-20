@@ -36,13 +36,15 @@
         <div class="gallery_wrapper">
             {% with images = get_image_set() %}
              {% for i in range(4) %}
-            <div class="gallery">
-              <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
-                <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
-              </a>
-              <div class="desc">{{ images[i]['name'] }}</div>
+            <div class="gal_item">
+                <div class="gallery">
+                  <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
+                    <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
+                  </a>
+                </div>
+                <div class="desc">{{ images[i]['name'] }}</div>
             </div>
-            {% endfor %}
+             {% endfor %}
             {% endwith %}
         </div>
     </body>
