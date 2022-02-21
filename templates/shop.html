@@ -10,7 +10,8 @@
                     <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="300" height="300">
                   </a>
                 </div>
-                <div class="desc">{{ images[i]['name'] }}</div>
+                <div class="desc"><h3>{{ images[i]['colour']+" " }}{{ images[i]['name'] }}</h3>{{ "£"+images[i]['cost'] }}</div>
+{#                <div class="desc">{{ "£"+images[i]['cost'] }}</div>#}
             </div>
             {% endfor %}
             {% endwith %}

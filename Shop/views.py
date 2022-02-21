@@ -26,13 +26,13 @@ def shop():
 
 def get_item_info():
     d = []
-    results = db.session.query(Products.image_path, Products.name, Products.cost, Products.description).all()
+    results = db.session.query(Products.image_path, Products.name, Products.colour, Products.cost, Products.description).all()
 
     for row in results:
         print(row.image_path)
         if (row.image_path is None):
             continue
-        d.append({'path':row.image_path, 'name': row.name, 'description': row.description, 'cost': row.cost})
+        d.append({'path':row.image_path, 'name': row.name, 'colour': row.colour, 'description': row.description, 'cost': str(row.cost)+"0"})
     return d
 
 def get_image_name(path):

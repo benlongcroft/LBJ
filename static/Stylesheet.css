@@ -33,6 +33,14 @@ h2{
   text-decoration-line: underline;
 }
 
+h3{
+  font-family: "Teko";
+  text-transform: capitalize;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
 /*Paragraph Text*/
 p {
   font-family: "Teko";
