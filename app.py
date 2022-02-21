@@ -1,14 +1,19 @@
 from flask import Flask, render_template
 from Gallery.views import get_image_set
-from Shop.views import get_shop_image
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///LostBondDB.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '5jE6y9MTmkCGqWRaBF7fz4'
 app.config['RECAPTCHA_PUBLIC_KEY'] = "6LekrNocAAAAAJmeku5jE6y9MTmkCGqWRaBF7fz4"
 app.config['RECAPTCHA_PRIVATE_KEY'] = "6LekrNocAAAAAPGHhArtwxjfv1p-TC1C1VNGmQCO"
+db = SQLAlchemy(app)
 
+from Shop.views import shop_blueprint
+
+app.register_blueprint(shop_blueprint)
 
 # HOME PAGE VIEW
 @app.route('/')
@@ -24,12 +29,6 @@ def index():
 @app.route('/about')
 def about():
     return render_template("about.html")
-
-
-@app.route('/shop')
-def shop():
-    return render_template("shop.html", get_shop_images=get_shop_image)
-
 
 @app.errorhandler(400)
 def bad_request(error):
