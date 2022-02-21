@@ -35,12 +35,22 @@ h2{
 
 h3{
   font-family: "Teko";
-  text-transform: capitalize;
+  text-transform: lowercase;
   font-size: 25px;
-  color: black;
+  display: compact;
+  color: white;
   text-align: center;
 }
 
+p.caption{
+  font-family: "Teko";
+  text-transform: lowercase;
+  font-size: 20px;
+  color: white;
+  display: compact;
+  text-align: center;
+  margin: 0 auto;
+}
 /*Paragraph Text*/
 p {
   font-family: "Teko";
@@ -125,29 +135,28 @@ body{
 /* shop stuff */
 .shop_wrapper{
   background-color: white;
-  display: table-row;
-  /*align-items: center;*/
+  color: white;
+  display: grid;
+  row-gap: 50px;
+  column-gap: 50px;
+  grid-template-columns: auto auto auto auto;
   margin: 0 auto;
-  /*align-self: center;*/
-  position: absolute;
+  align-self: center;
   /*overflow: -moz-scrollbars-vertical;*/
-  overflow: auto;
+  /*overflow: ;*/
   height: auto;
   width: 100%;
 }
 
 div.shop_div {
-  display: inline-table;
   margin: 0 auto;
-  padding: 10px;
   height: auto;
-  width: 20%;
-  position: relative;
+  width: 100%;
 }
 
 div.img_shop_div {
   text-align: center;
-  padding: 10px;
+  /*padding: 10px;*/
   height: 70%;
   width: auto;
 }
@@ -158,13 +167,24 @@ div.img_shop img {
   margin: 0 auto;
 }
 
-div.shop_div:hover {
-    background-color: lightgrey;
-    color: white;
+div.shop-desc {
+  /*margin: 0 auto;*/
+  /*display: */
+  /*padding-top: 20px;*/
+  width: 100%;
+  font-family: "Teko";
+  color: white;
+  background-color: black;
+  overflow-wrap: break-word;
+  text-align: center;
+}
 
-    /*border: 5px solid white;*/
-    /*border-right-color: dimgray;*/
-    /*border-left-color: dimgray;*/
+div.shop_div:hover {
+    /*background-color: lightgrey;*/
+
+    border: 10px solid black;
+    border-right-color: dimgray;
+    border-left-color: dimgray;
 }
 
 /*Gallery stuff*/
@@ -215,7 +235,7 @@ div.gallery img {
 div.desc {
   /*margin: 0 auto;*/
   /*display: */
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   font-family: "Teko";
   color: black;
   overflow-wrap: break-word;

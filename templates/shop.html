@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-       <section class="shop_wrapper">
+        <section>
+        <p>
+            15% of profits will be donated to the Young Minds Charity
+        </p>
+        </section>
+       <div class="shop_wrapper">
             {% with images = get_shop_images() %}
              {% for i in range(15) %}
             <div class="shop_div">
@@ -10,10 +15,14 @@
                     <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="300" height="300">
                   </a>
                 </div>
-                <div class="desc"><h3>{{ images[i]['colour']+" " }}{{ images[i]['name'] }}</h3>{{ "£"+images[i]['cost'] }}</div>
+                <div class="shop-desc">
+                    <h3>{{ images[i]['name'] }}</h3>
+                    <p class="caption">{{ images[i]['colour']}}</p>
+                    <p class="caption">{{ "£"+images[i]['cost'] }}</p>
+                </div>
 {#                <div class="desc">{{ "£"+images[i]['cost'] }}</div>#}
             </div>
             {% endfor %}
             {% endwith %}
-        </section>
+        </div>
 {% endblock %}
