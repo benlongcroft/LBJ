@@ -64,31 +64,34 @@ body{
 .navbar-item {
   float: left;
   padding: 20px;
+  background-color: white;
   text-transform: lowercase;
   font-weight: bold;
   font-family: "Teko";
   font-size: 30px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: dimgray;
+  color: black;
 }
 
 .navbar-item-right {
   padding: 20px;
+  background-color: white;
   text-transform: lowercase;
   font-weight: bold;
   font-family: "Teko";
   font-size: 30px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: dimgrey;
+  color: black;
   float: right;
 }
 
 .navbar-item-home {
   padding: 10px;
   font-family: "ChomskyRegular", serif;
-  font-size: 35px;
+  background-color: white;
+  font-size: 40px;
   letter-spacing: 4px;
   text-decoration: none;
   color: black;
@@ -96,24 +99,28 @@ body{
 }
 
 .navbar-item:hover {
-  background: black;
-  color: white;
-  border: 3px solid white;
+  background: white;
+  color: black;
+  border: 10px solid black;
+  border-right-color: dimgray;
+  border-left-color: dimgray;
 }
 
 .navbar-item-right:hover {
-  background: black;
-  color: white;
-  border: 3px solid white;
+  background: white;
+  color: black;
+  border: 10px solid black;
+  border-left-color: dimgray;
+  border-right-color: dimgray;
 }
 
 /* shop stuff */
 .shop_wrapper{
   background-color: white;
-  color: white;
-  display: table;
-  align-items: center;
-  align-self: center;
+  display: table-row;
+  /*align-items: center;*/
+  margin: 0 auto;
+  /*align-self: center;*/
   position: absolute;
   /*overflow: -moz-scrollbars-vertical;*/
   overflow: auto;
@@ -144,7 +151,12 @@ div.img_shop img {
 }
 
 div.shop_div:hover {
-  border: 10px solid black;
+    background-color: lightgrey;
+    color: white;
+
+    /*border: 5px solid white;*/
+    /*border-right-color: dimgray;*/
+    /*border-left-color: dimgray;*/
 }
 
 /*Gallery stuff*/
@@ -170,7 +182,10 @@ div.gallery {
 
 div.gal_item{
   display: inline-block;
+  /*background-color: lightgrey;*/
   margin: 0 auto;
+  border: 5px;
+  /*border-style: inset;*/
   /*padding-top: 30px;*/
   height: auto;
   width: 20%;
@@ -178,7 +193,9 @@ div.gal_item{
 }
 
 div.gal_item:hover {
-  border: 10px solid black;
+  border: 20px solid black;
+  border-right-color: dimgray;
+  border-left-color: dimgray;
 }
 
 div.gallery img {
@@ -192,7 +209,6 @@ div.desc {
   /*display: */
   padding-top: 20px;
   font-family: "Teko";
-  background-color: white;
   color: black;
   overflow-wrap: break-word;
   text-align: center;
@@ -241,9 +257,10 @@ div.desc {
   width: 100%;
   text-align: center;
   height: 100%;
-  font-size: 14px;
+  font-size: 30px;
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Teko';
   cursor: pointer;
   -webkit-transition: color 0.5s, background-color 0.5s;
   -moz-transition: color 0.5s, background-color 0.5s;
