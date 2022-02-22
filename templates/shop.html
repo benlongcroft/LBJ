@@ -8,21 +8,20 @@
         </section>
        <div class="shop_wrapper">
             {% with images = get_shop_images() %}
-             {% for i in range(15) %}
-            <div class="shop_div">
-                <div class="img_shop_div">
-                  <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
-                    <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="300" height="300">
-                  </a>
-                </div>
-                <div class="shop-desc">
-                    <h3>{{ images[i]['name'] }}</h3>
-                    <p class="caption">{{ images[i]['colour']}}</p>
-                    <p class="caption">{{ "£"+images[i]['cost'] }}</p>
-                </div>
-{#                <div class="desc">{{ "£"+images[i]['cost'] }}</div>#}
-            </div>
+                {% for i in range(15) %}
+                    <div class="shop_div">
+                        <div class="img_shop_div">
+                          <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
+                            <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="300" height="300">
+                          </a>
+                        </div>
+                        <div class="shop-desc">
+                            <h3>{{ images[i]['name'] }}</h3>
+                            <p class="caption">{{ images[i]['colour']}}</p>
+                            <p class="caption">{{ "£"+images[i]['cost'] }}</p>
+                        </div>
+                    </div>
             {% endfor %}
             {% endwith %}
-        </div>
+       </div>
 {% endblock %}

@@ -35,9 +35,9 @@ h2{
 
 h3{
   font-family: "Teko";
+  margin:  6px;
   text-transform: lowercase;
   font-size: 25px;
-  display: compact;
   color: white;
   text-align: center;
 }
@@ -47,9 +47,8 @@ p.caption{
   text-transform: lowercase;
   font-size: 20px;
   color: white;
-  display: compact;
   text-align: center;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 /*Paragraph Text*/
 p {
@@ -132,20 +131,26 @@ body{
   border-right-color: dimgray;
 }
 
+.div.bar{
+  background-color: black;
+  width: 100%;
+  height:100px;
+  /*position: absolute;*/
+}
 /* shop stuff */
 .shop_wrapper{
   background-color: white;
   color: white;
   display: grid;
-  row-gap: 50px;
-  column-gap: 50px;
-  grid-template-columns: auto auto auto auto;
+  row-gap: 40px;
+  column-gap: 40px;
+  grid-template-columns: auto auto auto;
   margin: 0 auto;
-  align-self: center;
+  /*align-self: center;*/
   /*overflow: -moz-scrollbars-vertical;*/
-  /*overflow: ;*/
+  overflow: auto;
   height: auto;
-  width: 100%;
+  width: 80%;
 }
 
 div.shop_div {
@@ -156,7 +161,7 @@ div.shop_div {
 
 div.img_shop_div {
   text-align: center;
-  /*padding: 10px;*/
+  margin: 0 auto;
   height: 70%;
   width: auto;
 }
@@ -179,12 +184,13 @@ div.shop-desc {
   text-align: center;
 }
 
-div.shop_div:hover {
+.shop_div:hover {
     /*background-color: lightgrey;*/
 
-    border: 10px solid black;
-    border-right-color: dimgray;
-    border-left-color: dimgray;
+  border: 10px solid lightgrey;
+  border-left-color: dimgray;
+  border-right-color: dimgray;
+
 }
 
 /*Gallery stuff*/
