@@ -39,7 +39,7 @@
             <div class="gal_item">
                 <div class="gallery">
                   <a target="_blank" href={{ url_for('static', filename=images[i]['path']) }}>
-                    <img src={{ url_for('static', filename=images[i]['path']) }} alt="LostBondImage" width="600" height="400">
+                    <img src={{ url_for('static', filename=images[i]['path']) }} alt={{ images[i]['name'] }} width="600" height="400">
                   </a>
                 </div>
                 <div class="desc">{{ images[i]['name'] }}</div>

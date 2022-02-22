@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template
 from app import db
 from models import Products
+
+
 shop_blueprint = Blueprint('shop', __name__, template_folder='templates')
 
 
