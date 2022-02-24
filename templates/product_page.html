@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+<link rel="icon" type="image/icon" href="/static/assets/img/favicon_icons/favicon.ico"/>
+
+{% block content %}
+    <body>
+    {% with p = product %}
+        <div class="product_info">
+            <h1>
+            {{ p.name }}
+            </h1>
+            <img src="{{ url_for('static', filename=p.image_path)}}" width="500" height="500"/>
+        </div>
+    {% endwith %}
+    </body>
+
+{% endblock %}

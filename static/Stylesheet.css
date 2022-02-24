@@ -138,6 +138,18 @@ body{
   /*position: absolute;*/
 }
 /* shop stuff */
+
+div.product_info{
+  background-color: black;
+  border: 10px inset white;
+  display: inline-block;
+  margin: 0 auto;
+  overflow: auto;
+  justify-content: center;
+  text-align: center;
+
+}
+
 .shop_wrapper{
   background-color: white;
   color: white;

@@ -1,7 +1,6 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from app import db
 from models import Products
-
 
 shop_blueprint = Blueprint('shop', __name__, template_folder='templates')
 
@@ -23,20 +22,34 @@ shop_blueprint = Blueprint('shop', __name__, template_folder='templates')
 
 @shop_blueprint.route('/shop')
 def shop():
-    return render_template("shop.html", get_shop_images=get_item_info)
+    return render_template("shop.html", get_shop_images=get_all_items)
 
 
-def get_item_info():
+@shop_blueprint.route('/product', methods=['GET'])
+def product_page():
+    pid = request.args.get('prod', None)
+    return render_template("product_page.html", product=get_product(pid))
+
+
+def get_product(pid):
+    return Products.query.filter_by(product_id=pid).first()
+
+
+def get_all_items():
     d = []
-    results = db.session.query(Products.image_path, Products.name, Products.colour, Products.cost, Products.description).all()
+    results = db.session.query(Products.product_id, Products.image_path, Products.name,
+                               Products.colour, Products.cost,
+                               Products.description).all()
 
     for row in results:
-        print(row.image_path)
-        if (row.image_path is None):
+        if row.image_path == None:
             continue
-        d.append({'path':row.image_path, 'name': row.name, 'colour': row.colour, 'description': row.description, 'cost': str(row.cost)+"0"})
+        print(row.image_path)
+        d.append(
+            {'product_id': row.product_id, 'path': row.image_path, 'name': row.name, 'colour': row.colour,
+             'description': row.description, 'cost': str(row.cost) + "0"})
     return d
+
 
 def get_image_name(path):
     return path.split("/")[-1].split(".")[0]
-
