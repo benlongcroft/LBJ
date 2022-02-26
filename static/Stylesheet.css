@@ -15,7 +15,7 @@ h1{
     font-family: 'ChomskyRegular';
     position: relative;
     font-size: 40px;
-    color: white;
+    /*color: white;*/
     overflow: auto;
     display: -moz-inline-box;
 }
@@ -25,7 +25,7 @@ h2{
   font-family: "Teko";
   text-transform: lowercase;
   font-size: 30px;
-  color: white;
+  /*color: white;*/
   display: -moz-inline-box;
   padding: 20px;
   overflow: auto;
@@ -38,7 +38,7 @@ h3{
   margin:  6px;
   text-transform: lowercase;
   font-size: 25px;
-  color: white;
+  /*color: white;*/
   text-align: center;
 }
 
@@ -46,7 +46,7 @@ p.caption{
   font-family: "Teko";
   text-transform: lowercase;
   font-size: 20px;
-  color: white;
+  /*color: white;*/
   text-align: center;
   /*margin: 0 auto;*/
 }
@@ -55,13 +55,14 @@ p {
   font-family: "Teko";
   font-size: 20px;
   letter-spacing: 3px;
-  color: white;
+  /*color: white;*/
   margin: 10px;
   text-align: center;
 }
 
 body{
     background-color: black;
+    color: white;
     /*position: relative;*/
     height: auto;
     min-height: 100% !important;
@@ -99,23 +100,11 @@ body{
   font-weight: bold;
   font-family: "Teko";
   font-size: 20px;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   text-decoration: none;
   color: black;
 }
 
-/*.navbar-item-right {*/
-/*  padding: 10px;*/
-/*  background-color: white;*/
-/*  text-transform: lowercase;*/
-/*  font-weight: bold;*/
-/*  font-family: "Teko";*/
-/*  font-size: 20px;*/
-/*  letter-spacing: 4px;*/
-/*  text-decoration: none;*/
-/*  color: black;*/
-/*  float: right;*/
-/*}*/
 
 .navbar-item-home {
   padding: 10px;
@@ -131,20 +120,25 @@ body{
 }
 
 .navbar-item:hover {
-  background: black;
-  color: white;
+  color: #71A9F7;
+  /*background-color: #912F40;*/
+  text-shadow: -2px 1px black;
 }
 
 .div.bar{
   background-color: black;
+  color: white;
   width: 100%;
   height:100px;
   /*position: absolute;*/
 }
 /* shop stuff */
 
+
+
 div.product_info{
   background-color: black;
+  color: white;
   display: block;
   margin: 0 auto;
   overflow: auto;
@@ -167,7 +161,7 @@ div.product_desc{
   font-family: "Teko";
   letter-spacing: 3px;
   display: inline-block;
-  color: white;
+  /*color: white;*/
   text-align: center;
   font-size: 25px;
   float: outside;
@@ -188,29 +182,32 @@ button.buy-button{
 }
 
 button.buy-button:hover{
-  background-color: dimgray;
+  background-color: #71A9F7;
   color: white;
 }
 
 .shop_wrapper{
   background-color: white;
-  color: white;
+  color: black;
   display: grid;
-  row-gap: 40px;
-  column-gap: 40px;
+  row-gap: 20px;
+  column-gap: 20px;
   grid-template-columns: auto auto auto;
   margin: 0 auto;
   /*align-self: center;*/
   /*overflow: -moz-scrollbars-vertical;*/
   overflow: auto;
   height: auto;
-  width: 80%;
+  width: 90%;
 }
 
 div.shop_div {
   margin: 0 auto;
   height: auto;
+  color: inherit;
   width: 100%;
+  font-family: "Teko";
+  text-align: center;
 }
 
 div.img_shop_div {
@@ -222,29 +219,40 @@ div.img_shop_div {
 
 div.img_shop img {
   height: auto;
-  width: 100%;
+  width: auto;
   margin: 0 auto;
 }
 
-div.shop-desc {
-  /*margin: 0 auto;*/
-  /*display: */
-  /*padding-top: 20px;*/
-  width: 100%;
+/*div.shop-desc {*/
+/*  !*margin: 0 auto;*!*/
+/*  !*display: *!*/
+/*  !*padding: 20px;*!*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  font-family: "Teko";*/
+/*  color: white;*/
+/*  background-color: black;*/
+/*  overflow-wrap: break-word;*/
+/*  text-align: center;*/
+/*}*/
+
+/*h3.shop-text {*/
+/*  color: black;*/
+/*}*/
+
+div.shop-text {
   font-family: "Teko";
-  color: white;
-  background-color: black;
-  overflow-wrap: break-word;
+  text-transform: lowercase;
+  font-size: 20px;
+  /*color: black;*/
   text-align: center;
+  /*margin: 0 auto;*/
 }
 
-.shop_div:hover {
-    /*background-color: lightgrey;*/
-
-  border: 10px solid lightgrey;
-  border-left-color: dimgray;
-  border-right-color: dimgray;
-
+div.shop_div:hover {
+    text-shadow: -2px 1px black;
+    color: #71A9F7;
+    /*background-color: #71A9F7;*/
 }
 
 /*Gallery stuff*/
@@ -282,8 +290,8 @@ div.gal_item{
 
 div.gal_item:hover {
   border: 20px solid black;
-  border-right-color: dimgray;
-  border-left-color: dimgray;
+  border-right-color: #71A9F7;
+  border-left-color: #71A9F7;
 }
 
 div.gallery img {
