@@ -21,15 +21,15 @@
                     <a class="navbar-item">
                         Gallery
                     </a>
-                    <a class="navbar-item-right">
+                    <a class="navbar-item">
                         Contact Us
                     </a>
-                    <a href={{ url_for("about") }} class="navbar-item-right">
+                    <a href={{ url_for("about") }} class="navbar-item">
                         Our Story
                     </a>
             </div>
         </nav>
-        <div>
+        <div class="main">
             {% block content %}
             {% endblock %}
         </div>

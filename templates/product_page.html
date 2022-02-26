@@ -6,10 +6,20 @@
     <body>
     {% with p = product %}
         <div class="product_info">
-            <h1>
-            {{ p.name }}
-            </h1>
-            <img src="{{ url_for('static', filename=p.image_path)}}" width="500" height="500"/>
+{#            <div class="product_desc">#}
+                <h2>
+                {{ p.colour+" " }}{{ p.name }}
+                </h2>
+                <img src="{{ url_for('static', filename=p.image_path)}}" width="400" height="400" class="product_info"/>
+{#            </div>#}
+            <div class="product_desc">
+                <p>
+                    {{ p.description }}
+                </p>
+                <h3>{{ "£"+p.cost|string +"0" }}</h3>
+                <button class="buy-button" type="button"> BUY </button>
+            </div>
+
         </div>
     {% endwith %}
     </body>

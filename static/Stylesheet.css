@@ -63,15 +63,26 @@ p {
 body{
     background-color: black;
     /*position: relative;*/
-    /*height: auto;*/
-    /*min-height: 100% !important;*/
+    height: auto;
+    min-height: 100% !important;
 }
 
+.main {
+  margin-left: 140px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  justify-content: center;
+}
 
 
 /*Navbar Stuff*/
 .navbar-default {
-    height: 70px;
+    height: 100%;
+    width: 140px;
+    z-index: 1;
+    position: fixed;
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden;
     display: -moz-inline-block;
     background-color: white;
     color: black;
@@ -81,54 +92,47 @@ body{
 .navbar-item {
   float: left;
   padding: 20px;
+  height: 20px;
+  width: 100%;
   background-color: white;
   text-transform: lowercase;
   font-weight: bold;
   font-family: "Teko";
-  font-size: 30px;
+  font-size: 20px;
   letter-spacing: 4px;
   text-decoration: none;
   color: black;
 }
 
-.navbar-item-right {
-  padding: 20px;
-  background-color: white;
-  text-transform: lowercase;
-  font-weight: bold;
-  font-family: "Teko";
-  font-size: 30px;
-  letter-spacing: 4px;
-  text-decoration: none;
-  color: black;
-  float: right;
-}
+/*.navbar-item-right {*/
+/*  padding: 10px;*/
+/*  background-color: white;*/
+/*  text-transform: lowercase;*/
+/*  font-weight: bold;*/
+/*  font-family: "Teko";*/
+/*  font-size: 20px;*/
+/*  letter-spacing: 4px;*/
+/*  text-decoration: none;*/
+/*  color: black;*/
+/*  float: right;*/
+/*}*/
 
 .navbar-item-home {
   padding: 10px;
   font-family: "ChomskyRegular", serif;
   background-color: white;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 4px;
   text-decoration: none;
   color: black;
+  text-align: center;
+  justify-content: center;
   float: left;
 }
 
 .navbar-item:hover {
-  background: white;
-  color: black;
-  border: 10px solid black;
-  border-right-color: dimgray;
-  border-left-color: dimgray;
-}
-
-.navbar-item-right:hover {
-  background: white;
-  color: black;
-  border: 10px solid black;
-  border-left-color: dimgray;
-  border-right-color: dimgray;
+  background: black;
+  color: white;
 }
 
 .div.bar{
@@ -141,13 +145,51 @@ body{
 
 div.product_info{
   background-color: black;
-  border: 10px inset white;
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   overflow: auto;
-  justify-content: center;
+  align-items: center;
   text-align: center;
 
+}
+
+img.product_info{
+  padding: 10px;
+  display: inline-grid;
+  text-align: center;
+  height: auto;
+  /*width: 30%;*/
+  margin: 0 auto;
+}
+
+div.product_desc{
+  /*width:40%;*/
+  font-family: "Teko";
+  letter-spacing: 3px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  float: outside;
+}
+
+button.buy-button{
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  top: 30%;
+  left: 30%;
+  font-size: 25px;
+  font-family: Teko;
+  letter-spacing: 3px;
+  background-color: white;
+  color: black;
+}
+
+button.buy-button:hover{
+  background-color: dimgray;
+  color: white;
 }
 
 .shop_wrapper{
@@ -216,7 +258,7 @@ div.shop-desc {
   overflow: auto;
   /*padding: 1%;*/
   height: 50%;
-  width: 100%;
+  width: 90%;
 }
 
 div.gallery {
