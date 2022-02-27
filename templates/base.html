@@ -11,8 +11,27 @@
     {# Bootstrap 5 Carousel import link #}
 </head>
         <nav>
-            <div class="navbar-default">
-                    <a href={{ url_for("index") }} class="navbar-item-home">
+            {% if is_on == True %} }
+            <div class="navbar-home">
+                    <a href={{ url_for("index") }} class="navbar-item-home-logo">
+                       Lost Bond
+                    </a>
+                    <a href={{ url_for("shop.shop") }} class="navbar-home-item">
+                        Shop
+                    </a>
+                    <a href={{ url_for("gallery.gallery") }} class="navbar-home-item">
+                        Gallery
+                    </a>
+                    <a class="navbar-home-item">
+                        Contact Us
+                    </a>
+                    <a href={{ url_for("about") }} class="navbar-home-item">
+                        Our Story
+                    </a>
+            </div>
+            {% else %}
+              <div class="navbar-default">
+                    <a href={{ url_for("index") }} class="navbar-item-logo">
                        Lost Bond
                     </a>
                     <a href={{ url_for("shop.shop") }} class="navbar-item">
@@ -28,6 +47,7 @@
                         Our Story
                     </a>
             </div>
+            {% endif %}
         </nav>
         <div class="main">
             {% block content %}

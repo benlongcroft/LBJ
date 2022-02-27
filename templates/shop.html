@@ -9,7 +9,6 @@
                 {% for i in range(15) %}
                     <div class="shop_div">
                         <div class="img_shop_div">
-{#                            <form method="post" action="/product">#}
                                 <a target="_blank" href={{ url_for("shop.product_page", prod=product_info[i]['product_id']) }}>
                                     <img src={{ url_for("static", filename=product_info[i]['path']) }} alt="{{ product_info[i].image_path }}" width="300" height="300">
                                  </a>
@@ -19,14 +18,7 @@
                                     </h3>
                                     {{ "£"+product_info[i]['cost'] }}
                                 </div>
-{#                                <input type="submit" value="more"/>#}
-{#                            </form>#}
                         </div>
-{#                        <div class="shop-desc">#}
-{#                            <h3>{{ product_info[i]['name'] }}</h3>#}
-{#                            <p class="caption">{{ product_info[i]['colour']}}</p>#}
-{#                            <p class="caption">{{ "£"+product_info[i]['cost'] }}</p>#}
-{#                        </div>#}
                     </div>
             {% endfor %}
             {% endwith %}

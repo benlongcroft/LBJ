@@ -25,7 +25,7 @@ def start():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', is_on=True)
 
 
 @app.route('/about')
