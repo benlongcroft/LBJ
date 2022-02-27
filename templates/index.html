@@ -4,11 +4,9 @@
 
 {% block content %}
     <body>
-        <div>
-            <p>
-                <br>
+            <div class="caption">
                 Our Story on youth mental health, expressed through the arts.<br>
-                What's your story?<br>
+                What's your story?
 {#                His feet hurt; he stepped and stopped and dragged and stopped,<br>#}
 {#                young boy sat down, <br>#}
 {#                hands buried within each other and looked up. <br>#}
@@ -17,35 +15,6 @@
 {#                Scrawny boy, weathered pressed<br>#}
 {#                his manner tended inwards, wrapped around a point half a metre from his chest,<br>#}
 {#                        "How much longer?"<br>#}
-            </p>
-            <p>
-
-            </p>
-            <br>
-        </div>
-
-        {% block head %}
-          <style>
-            .notfound {
-              background-color: gray;
-              font-size: 125%;
-            }
-          </style>
-        {% endblock %}
-
-        <div class="gallery_wrapper">
-            {% with img_info = get_image_set() %}
-             {% for i in range(4) %}
-            <div class="gal_item">
-                <div class="gallery">
-                  <a target="_blank" href={{ url_for('static', filename=img_info[i]['path']) }}>
-                    <img src={{ url_for('static', filename=img_info[i]['path']) }} alt={{ img_info[i]['name'] }} width="600" height="400">
-                  </a>
-                </div>
-                <div class="desc">{{ img_info[i]['name'] }}</div>
             </div>
-             {% endfor %}
-            {% endwith %}
-        </div>
     </body>
 {% endblock %}

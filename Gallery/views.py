@@ -1,8 +1,13 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 import os
 import random
 
 gallery_blueprint = Blueprint('gallery', __name__, template_folder='templates')
+
+
+@gallery_blueprint.route('/gallery')
+def gallery():
+    return render_template("gallery.html", get_image_set=get_image_set)
 
 
 def get_image_set():
@@ -10,7 +15,7 @@ def get_image_set():
     files = os.listdir("./static/assets/gallery")
     assets_path = "assets/gallery"
     used = []
-    for x in range(10):
+    for x in range(len(files)):
         num = random.randint(0, len(files) - 1)
         if num in used:
             continue

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+     {% block head %}
+          <style>
+            .notfound {
+              background-color: gray;
+              font-size: 125%;
+            }
+          </style>
+        {% endblock %}
+    <div class="gallery_wrapper">
+            {% with img_info = get_image_set() %}
+             {% for i in range(10) %}
+            <div class="gal_item">
+                  <a class="gal_item" href={{ url_for('static', filename=img_info[i]['path']) }}>
+                    <img src={{ url_for('static', filename=img_info[i]['path']) }} alt={{ img_info[i]['name'] }} class="gal_item">
+                  </a>
+             <div class="desc">{{ img_info[i]['name'] }}</div>
+            </div>
+             {% endfor %}
+            {% endwith %}
+        </div>
+{% endblock %}

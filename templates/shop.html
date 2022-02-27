@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <section>
-        <p>
+        <div class="caption">
             15% of profits will be donated to the Young Minds Charity
-        </p>
-        </section>
+        </div>
        <div class="shop_wrapper">
             {% with product_info = get_shop_images() %}
                 {% for i in range(15) %}

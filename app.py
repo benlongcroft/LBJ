@@ -12,8 +12,10 @@ app.config['RECAPTCHA_PRIVATE_KEY'] = "6LekrNocAAAAAPGHhArtwxjfv1p-TC1C1VNGmQCO"
 db = SQLAlchemy(app)
 
 from Shop.views import shop_blueprint
+from Gallery.views import gallery_blueprint
 
 app.register_blueprint(shop_blueprint)
+app.register_blueprint(gallery_blueprint)
 
 # HOME PAGE VIEW
 @app.route('/')
@@ -23,7 +25,7 @@ def start():
 
 @app.route('/index')
 def index():
-    return render_template('index.html', get_image_set=get_image_set)
+    return render_template('index.html')
 
 
 @app.route('/about')
