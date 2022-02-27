@@ -22,6 +22,10 @@ app.register_blueprint(gallery_blueprint)
 def start():
     return render_template('splash.html')
 
+@app.route('/donate')
+def donate():
+    return  render_template('donate.html')
+
 
 @app.route('/index')
 def index():

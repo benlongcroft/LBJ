@@ -15,6 +15,7 @@ body.home {
 	background-size: 400% 400%;
 	animation: gradient 40s ease infinite;
 	height: 100vh;
+    /*justify-content: center;*/
 }
 
 @keyframes gradient {
@@ -116,16 +117,18 @@ div.caption{
 }
 
 .main {
-  margin-left: 10%; /* Same as the width of the sidebar */
-  /*padding: 0px 10px;*/
+  margin-left: 15%; /* Same as the width of the sidebar */
   justify-content: center;
+  text-align: center;
+  margin-right: 10%;
+  justify-items: center;
 }
 
 
 /*Navbar Stuff*/
 .navbar-default {
     height: 100%;
-    width: 10%;
+    width: 15%;
     z-index: 1;
     position: fixed;
     top: 0; /* Stay at the top */
@@ -137,7 +140,7 @@ div.caption{
 
 .navbar-home{
     height: 100%;
-    width: 10%;
+    width: 15%;
     z-index: 1;
     position: fixed;
     top: 0; /* Stay at the top */
@@ -180,7 +183,7 @@ div.caption{
 
 
 .navbar-item-home-logo {
-  padding: 10px;
+  padding: 10px 10px 20px;
   font-family: "ChomskyRegular", serif;
   font-size: 30px;
   letter-spacing: 4px;
@@ -192,7 +195,7 @@ div.caption{
 }
 
 .navbar-item-logo {
-  padding: 10px;
+  padding: 10px 10px 20px;
   font-family: "ChomskyRegular", serif;
   font-size: 30px;
   letter-spacing: 4px;
