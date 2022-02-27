@@ -14,13 +14,9 @@ def get_image_set():
     image_set = []
     files = os.listdir("./static/assets/gallery")
     assets_path = "assets/gallery"
-    used = []
+    random.shuffle(files)
     for x in range(len(files)):
-        num = random.randint(0, len(files) - 1)
-        if num in used:
-            continue
-        used.append(num)
-        img_path = files[num]
+        img_path = files[x]
         if img_path == ".DS_Store":
             continue
         p = os.path.join(assets_path, img_path)
