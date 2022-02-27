@@ -11,21 +11,21 @@
 
 /*home page stuff*/
 body.home {
-	background: linear-gradient(-92deg, #070707, #454545, #CCCBCB, #F5F1ED);
+	background: linear-gradient(-45deg, #F5F1ED, #D2D1CF,#9A9A99, #070707);
 	background-size: 400% 400%;
-	animation: gradient 50s ease infinite;
-	height: 90vh;
+	animation: gradient 60s ease infinite;
+	height: 100vh;
 }
 
 @keyframes gradient {
 	0% {
-		background-position: 1% 50%;
+		background-position: 0 50%;
 	}
 	50% {
-		background-position: 90% 43%;
+		background-position: 20% 100%;
 	}
 	100% {
-		background-position: 5% 56%;
+		background-position: 100% 50%;
 	}
 }
 
@@ -76,19 +76,19 @@ p {
 div.home-bar{
   font-family: "Teko", serif;
   font-size: 20px;
-    text-shadow: -1px 1px black;
-    color: #E06D06;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
+  text-shadow: -1px 1px #9A9A99;
+  color: #070707;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 h1.home-header{
-  font-family: "ChomskyRegular" serif;
+  font-family: "ChomskyRegular", serif;
   font-size: 80px;
   position: relative;
   color: #070707;
-  text-shadow: -3px 1px #E06D06;
+  text-shadow: -3px 1px #9A9A99;
   overflow: auto;
   display: -moz-inline-box;
 
@@ -159,8 +159,7 @@ div.caption{
   font-size: 20px;
   letter-spacing: 2px;
   text-decoration: none;
-  color: #E06D06;
-  text-shadow: -2px 1px black;
+  color: #070707;
   background-color: transparent;
 }
 
@@ -186,10 +185,9 @@ div.caption{
   font-size: 30px;
   letter-spacing: 4px;
   text-decoration: none;
-  color: #E06D06;
+  color: #070707;
   text-align: center;
   justify-content: center;
-  text-shadow: -2px 1px black;
   float: left;
 }
 
@@ -212,8 +210,8 @@ div.caption{
 }
 
 .navbar-item:hover{
-  color: #E06D06;
-  text-shadow: -2px 1px #F5F1ED;
+  color: #F5F1ED;
+  text-shadow: -2px 1px #E06D06;
 }
 
 /* Product Page */
@@ -264,7 +262,7 @@ button.buy-button{
 }
 
 button.buy-button:hover{
-  background-color: #E06D06;
+  background-color: #9A9A99;
   color: #F5F1ED;
 }
 
@@ -319,8 +317,8 @@ div.shop-text {
 }
 
 div.shop_div:hover {
-    text-shadow: -2px 1px #070707;
-    color: #E06D06;
+    text-shadow: -2px 2px #E06D06;
+    color: #070707;
     /*background-color: #E06D06;*/
 }
 
@@ -362,8 +360,8 @@ img.gal_item{
 /*}*/
 
 div.gal_item:hover {
-  text-shadow: -2px 1px #F5F1ED;
-  color: #E06D06;
+  text-shadow: -2px 1px #E06D06;
+  color: #F5F1ED;
   overflow-wrap: break-word;
 }
 
