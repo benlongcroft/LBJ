@@ -11,9 +11,9 @@
 
 /*home page stuff*/
 body.home {
-	background: linear-gradient(-45deg, #F5F1ED, #D2D1CF,#9A9A99, #070707);
+	background: linear-gradient(-45deg, #F5F1ED, #D2D1CF, #9A9A99, #070707);
 	background-size: 400% 400%;
-	animation: gradient 60s ease infinite;
+	animation: gradient 40s ease infinite;
 	height: 100vh;
 }
 
@@ -76,7 +76,7 @@ p {
 div.home-bar{
   font-family: "Teko", serif;
   font-size: 20px;
-  text-shadow: -1px 1px #9A9A99;
+  /*text-shadow: -1px 1px #9A9A99;*/
   color: #070707;
   text-align: center;
   margin: 0 auto;
@@ -88,7 +88,7 @@ h1.home-header{
   font-size: 80px;
   position: relative;
   color: #070707;
-  text-shadow: -3px 1px #9A9A99;
+  /*text-shadow: -3px 1px #9A9A99;*/
   overflow: auto;
   display: -moz-inline-box;
 
@@ -384,6 +384,7 @@ div.desc {
   :~) */
 
 .text {
+  background-color: #070707;
   opacity: 0;
   position: absolute;
   z-index: 7;
@@ -461,7 +462,7 @@ div.desc {
     margin: auto;
   font-size: 40px;
   font-weight: 600;
-  color: #ffffff;
+  color: #F5F1ED;
   opacity: 1;
     z-index: 5;
   will-change: opacity;
@@ -608,22 +609,22 @@ div.desc {
 }
 @-webkit-keyframes logo {
   100% {
-    color: #292929;
+    color: #070707;
   }
 }
 @-moz-keyframes logo {
   100% {
-    color: #292929;
+    color: #070707;
   }
 }
 @-o-keyframes logo {
   100% {
-    color: #292929;
+    color: #070707;
   }
 }
 @keyframes logo {
   100% {
-    color: #292929;
+    color: #070707;
   }
 }
 @-webkit-keyframes type {
