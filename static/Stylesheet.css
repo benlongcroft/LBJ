@@ -97,10 +97,10 @@ body.home {
   padding-bottom: 1%;
 }
 
-.home-video{
-  text-align: center;
-  padding: 2.5% 15% 15% 10%;
-}
+/*.home-video{*/
+/*  text-align: center;*/
+/*  !*padding: 2.5% 15% 15% 10%;*!*/
+/*}*/
 
 /*body stuff*/
 body{
@@ -127,7 +127,7 @@ div.caption{
   margin-left: 15%; /* Same as the width of the sidebar */
   justify-content: center;
   text-align: center;
-  /*margin-right: 10%;*/
+  padding-right: 15%;
   /*justify-items: center;*/
 }
 
