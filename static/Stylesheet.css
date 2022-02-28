@@ -266,8 +266,8 @@ button.buy-button:hover{
 /*Shop Grid*/
 
 .shop_wrapper{
-  background-color: #F5F1ED;
-  color: #070707;
+  /*background-color: #F5F1ED;*/
+  color: #F5F1ED;
   display: grid;
   row-gap: 20px;
   column-gap: 20px;
@@ -315,7 +315,7 @@ div.shop-text {
 
 div.shop_div:hover {
     text-shadow: -2px 2px #E06D06;
-    color: #070707;
+    color: #F5F1ED;
     /*background-color: #E06D06;*/
 }
 
