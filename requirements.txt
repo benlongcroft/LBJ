@@ -1,3 +1,4 @@
 Flask-Talisman
 Flask-SQLAlchemy
 Flask
+exif

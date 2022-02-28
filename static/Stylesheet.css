@@ -13,7 +13,7 @@
 body.home {
 	background: linear-gradient(-45deg, #F5F1ED, #D2D1CF, #9A9A99, #070707);
 	background-size: 400% 400%;
-	animation: gradient 40s ease infinite;
+	animation: gradient 20s ease infinite;
 	height: 100vh;
     /*justify-content: center;*/
 }
@@ -120,8 +120,8 @@ div.caption{
   margin-left: 15%; /* Same as the width of the sidebar */
   justify-content: center;
   text-align: center;
-  margin-right: 10%;
-  justify-items: center;
+  /*margin-right: 10%;*/
+  /*justify-items: center;*/
 }
 
 
@@ -345,7 +345,7 @@ div.shop_div:hover {
 div.gal_item{
   font-family: "Teko", serif;
   text-align: center;
-  display: flex;
+  display: block;
   justify-content: center;
   color: #F5F1ED;
   height: content-box;
@@ -371,8 +371,8 @@ div.gal_item:hover {
 div.desc {
   width: 100%;
   font-family: "Teko", serif;
-  font-size: 20px;
-  letter-spacing: 4px;
+  font-size: 15px;
+  letter-spacing: 3px;
   color: inherit;
   overflow-wrap: break-word;
   text-align: center;
