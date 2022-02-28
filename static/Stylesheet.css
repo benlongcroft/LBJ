@@ -12,15 +12,15 @@
 
 
 @keyframes gradient {
-	0% {
-		background-position: 0 50%;
-	}
-	50% {
-		background-position: 20% 100%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
+	100% { background-color:#F5F1ED; }
+	90% { background-color:#e1deda; }
+	78% { background-color:#cdcac7; }
+	65% { background-color:#bab7b4; }
+	53% { background-color:#a6a3a0; }
+	41% { background-color:#7e7c7a; }
+	28% { background-color:#565554; }
+	15% { background-color:#2f2e2d; }
+	0% { background-color:#070707; }
 }
 
 /* Headers */
@@ -68,9 +68,10 @@ p {
 /* Home page stuff */
 
 body.home {
-	background: linear-gradient(-45deg, #F5F1ED, #D2D1CF, #9A9A99, #070707);
+	background:#F5F1ED;
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	-webkit-animation: gradient 10s ease-in;
+    animation-iteration-count: 1;
 	height: 100vh;
     justify-content: center;
 }
@@ -210,6 +211,7 @@ div.caption{
   color: #F5F1ED;
   text-shadow: -2px 1px #E06D06;
 }
+
 
 /* Product Page */
 
