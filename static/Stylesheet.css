@@ -12,7 +12,7 @@
 
 
 @keyframes gradient {
-	100% { background-color:#F5F1ED; }
+	100% { background-color:#cdcac7; }
 	90% { background-color:#e1deda; }
 	78% { background-color:#cdcac7; }
 	65% { background-color:#bab7b4; }
@@ -65,10 +65,19 @@ p {
   text-align: center;
 }
 
+p.caption{
+  font-family: "Teko";
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #070707;
+  margin: 10px;
+  text-align: center;
+}
+
 /* Home page stuff */
 
 body.home {
-	background:#F5F1ED;
+	background:#cdcac7;
 	background-size: 400% 400%;
 	-webkit-animation: gradient 10s ease-in;
     animation-iteration-count: 1;
