@@ -227,32 +227,31 @@ div.caption{
 div.product_info{
   background-color: #070707;
   color: #F5F1ED;
-  display: block;
+  display: table-row;
   margin: 0 auto;
   overflow: auto;
-  align-items: center;
-  text-align: center;
+  /*align-items: center;*/
+  /*text-align: center;*/
 
 }
 
 img.product_info{
   padding: 10px;
-  display: inline-grid;
-  text-align: center;
+  float: left;
   height: auto;
   /*width: 30%;*/
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 div.product_desc{
   /*width:40%;*/
   font-family: "Teko";
   letter-spacing: 3px;
-  display: inline-block;
-  /*color: #F5F1ED;*/
+  display: block;
   text-align: center;
+  /*color: #F5F1ED;*/
   font-size: 25px;
-  float: outside;
+  /*float: right;*/
 }
 
 button.buy-button{
@@ -270,9 +269,41 @@ button.buy-button{
 }
 
 button.buy-button:hover{
-  background-color: #9A9A99;
+  background-color: #E06D06;
   color: #F5F1ED;
 }
+
+div.sizes{
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+label.size-check{
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  font-family: Teko;
+  letter-spacing: 3px;
+  /*float: bottom;*/
+  background-color: #070707;
+  color: inherit;
+  padding-right: 20px;
+}
+
+input.size-check{
+  height: 20px;
+  border: 2px #F5F1ED;
+  border-radius: 0;
+  width: 20px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+input.size-check:checked{
+  color: #E06D06;
+}
+
 
 /*Shop Grid*/
 
