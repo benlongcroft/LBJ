@@ -511,7 +511,7 @@ div.desc {
   color: #070707;
   border: 1px solid #F5F1ED;
   letter-spacing: 2px;
-    padding: 10% 0;
+  padding: 10% 0;
   width: 100%;
   text-align: center;
   height: 100%;
@@ -535,7 +535,6 @@ div.desc {
   color: #F5F1ED;
   border: 1px solid #F5F1ED;
 }
-
 .splash {
   width: 100%;
   height: 100%;
@@ -545,19 +544,20 @@ div.desc {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  background: black;
 }
 .splash_header {
   position: fixed;
-    padding: 20% 0;
+  padding: 20% 0;
   width: 100%;
   text-align: center;
   height: 100%;
-    margin: auto;
+  margin: auto;
   font-size: 40px;
   font-weight: 600;
   color: #F5F1ED;
   opacity: 1;
-    z-index: 5;
+  z-index: 5;
   will-change: opacity;
   -webkit-animation: h1 .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
   -moz-animation: h1 .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards;
@@ -702,22 +702,22 @@ div.desc {
 }
 @-webkit-keyframes logo {
   100% {
-    color: #070707;
+    color: black;
   }
 }
 @-moz-keyframes logo {
   100% {
-    color: #070707;
+    color: black;
   }
 }
 @-o-keyframes logo {
   100% {
-    color: #070707;
+    color: black;
   }
 }
 @keyframes logo {
   100% {
-    color: #070707;
+    color: black;
   }
 }
 @-webkit-keyframes type {
