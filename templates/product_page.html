@@ -11,26 +11,26 @@
         <div class="product_info">
             <img src="{{ url_for('static', filename=p.image_path)}}" width="400" height="400" class="product_info"/>
             <div class="product_desc">
-                <p>
                     {{ p.description }}
-                </p>
+                <br>
                 <br>
                 <h3>{{ "£"+p.cost|string +"0" }}</h3>
                 <br>
                 <div class="sizes">
                     <label class="size-check">S
-                      <input type="checkbox" class="size-check">
+                      <input name="size" type="radio" class="size-check">
                     </label>
                     <label class="size-check">M
-                      <input type="checkbox" class="size-check">
+                      <input name="size" type="radio" class="size-check">
                     </label>
                     <label class="size-check">L
-                      <input type="checkbox" class="size-check">
+                      <input name="size" type="radio" class="size-check">
                     </label>
                     <label class="size-check">XL
-                      <input type="checkbox" class="size-check">
+                      <input name="size" type="radio" class="size-check">
                     </label>
                 </div>
+                <br>
                 <button class="buy-button" type="button"> BUY </button>
             </div>
 

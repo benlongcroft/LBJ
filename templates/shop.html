@@ -9,7 +9,7 @@
                 {% for i in range(15) %}
                     <div class="shop_div">
                         <div class="img_shop_div">
-                                <a target="_blank" href={{ url_for("shop.product_page", prod=product_info[i]['product_id']) }}>
+                                <a href={{ url_for("shop.product_page", prod=product_info[i]['product_id']) }}>
                                     <img src={{ url_for("static", filename=product_info[i]['path']) }} alt="{{ product_info[i].image_path }}" width="300" height="300">
                                  </a>
                                 <div class="shop-text">
