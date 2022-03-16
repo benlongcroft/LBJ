@@ -74,6 +74,14 @@ p.caption{
   text-align: center;
 }
 
+p.home-caption{
+  font-family: "Teko";
+  font-size: 15px;
+  letter-spacing: 3px;
+  color: #070707;
+  margin: 10px;
+  text-align: center;
+}
 /* Home page stuff */
 
 body.home {
@@ -211,14 +219,14 @@ div.caption{
 }
 
 .navbar-home-item:hover {
-  color: #070707;
+  color: #E06D06;
   /*background-color: #912F40;*/
-  text-shadow: -2px 1px #E06D06;
+  text-shadow: -2px 2px #070707;
 }
 
 .navbar-item:hover{
   color: #F5F1ED;
-  text-shadow: -2px 1px #E06D06;
+  text-shadow: -2px 2px #E06D06;
 }
 
 
