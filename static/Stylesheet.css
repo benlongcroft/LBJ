@@ -74,15 +74,74 @@ p.caption{
   text-align: center;
 }
 
-p.home-caption{
+li.more-info{
   font-family: "Teko";
   font-size: 15px;
   letter-spacing: 3px;
   color: #070707;
   margin: 10px;
-  text-align: center;
+  cursor: pointer;
+  display: block;
 }
 /* Home page stuff */
+
+ul.video-menu {
+  position: relative;
+  top: 100%;
+  padding: 0;
+  list-style-type: none;
+  margin: 2px 0 0;
+}
+
+label.video-dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+input.dd-input{
+  display: none;
+}
+
+.dd-input + .video-menu {
+  display: none;
+}
+
+.dd-input:checked + .video-menu {
+  display: block;
+}
+
+div.video-menu-button{
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 20px;
+  height: 30%;
+  width: 100%;
+}
+
+div.video-menu-button:hover{
+  color: #E06D06;
+  text-shadow: -1px 1px #070707;
+}
+
+div.video-menu-button:after{
+  content: '';
+  position: relative;
+}
+
+div.video-menu-button:before {
+    content: "";
+    /*right: 10px;*/
+    /*top: 8px;*/
+    position: relative;
+    top: 10px;
+    float: right;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #070707;
+}
 
 body.home {
 	background:#cdcac7;
