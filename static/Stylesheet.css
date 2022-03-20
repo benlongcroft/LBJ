@@ -469,6 +469,9 @@ div.img_shop img {
 
 div.shop-text {
   font-family: "Teko";
+  text-decoration: none;
+  text-underline: none;
+  color: #F5F1ED;
   text-transform: lowercase;
   font-size: 20px;
   /*color: #070707;*/
@@ -476,7 +479,14 @@ div.shop-text {
   /*margin: 0 auto;*/
 }
 
-div.shop_div:hover {
+a.shop-text{
+  text-decoration: none;
+
+}
+
+
+.shop_div:hover {
+    text-decoration: none;
     text-shadow: -2px 2px #E06D06;
     color: #F5F1ED;
     /*background-color: #E06D06;*/
@@ -528,6 +538,11 @@ img.home-gal-item{
   width: 90%;
   float: bottom;
 
+}
+
+a.gal_item{
+  text-decoration: none;
+  color: #F5F1ED;
 }
 
 div.gal_item{
