@@ -17,24 +17,27 @@ from Gallery.views import gallery_blueprint
 app.register_blueprint(shop_blueprint)
 app.register_blueprint(gallery_blueprint)
 
+
 # HOME PAGE VIEW
 @app.route('/')
 def start():
     return render_template('splash.html')
 
+
 @app.route('/donate')
 def donate():
-    return  render_template('donate.html')
+    return render_template('donate.html')
 
 
 @app.route('/index')
 def index():
-    return render_template('index.html', is_home=True)
+    return render_template('index.html', is_home=True, get_image_set=get_image_set)
 
 
 @app.route('/about')
 def about():
     return render_template("about.html")
+
 
 @app.errorhandler(400)
 def bad_request(error):

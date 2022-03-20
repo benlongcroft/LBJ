@@ -38,6 +38,18 @@
                         </ul>
                     </label>
                     <br>
+                    <div class="home-gallery_wrapper">
+                        {% with img_info = get_image_set() %}
+                         {% for i in range(3) %}
+                        <div class="gal_item">
+                              <a class="gal_item" href={{ url_for('static', filename=img_info[i]['path']) }}>
+                                <img src={{ url_for('static', filename=img_info[i]['path']) }} alt={{ img_info[i]['name'] }} class="home-gal-item">
+                              </a>
+                         </div>
+                         {% endfor %}
+                            <a class="more-pics" href={{ url_for('gallery.gallery') }}>More -></a>
+                        {% endwith %}
+                    </div>
                     <iframe style="border-radius:12px; padding: 20px"
                         src="https://open.spotify.com/embed/episode/3qvUFXldA1LQLG8uJf8gGc?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
                     </iframe>
