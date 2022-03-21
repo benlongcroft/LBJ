@@ -2,3 +2,6 @@ Flask-Talisman
 Flask-SQLAlchemy
 Flask
 exif
+flask_wtf
+wtforms
+flask

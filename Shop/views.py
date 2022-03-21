@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash
 from app import db
 from models import Products
+from Shop.forms import CheckoutForm
 
 shop_blueprint = Blueprint('shop', __name__, template_folder='templates')
 
@@ -33,16 +34,21 @@ def product_page():
 
 @shop_blueprint.route('/checkout', methods=['POST'])
 def checkout():
+    form = CheckoutForm()
     size = [item for key, item in request.form.items()]
-    print(size)
     pid = request.args.get("pid", type=int)
     product = get_product(pid)
     if not size:
         flash("You must choose a size!")
         return render_template("product_page.html", product=product)
     else:
-        return render_template("checkout.html", item={'size': size[0], 'product':product})
+        return render_template("checkout.html", item={'size': size[0], 'product':product}, form=form)
 
+# @shop_blueprint.route("/success", methods=['POST'])
+# def submit_checkout():
+#     if form.validate_on_submit():
+#         flash("Form Submitted!")
+#         return render_template("checkout.html", item={'size': size[0], 'product':product}, form=form)
 
 def get_product(pid):
     return Products.query.filter_by(product_id=pid).first()

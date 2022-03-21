@@ -6,7 +6,7 @@
     <body>
     {% with p = product %}
         <h2>
-            {{ p.colour+" " }}{{ p.name }}
+            {{ p.colour+" " +p.name }}
         </h2>
         <div class="product_info">
             <img src="{{ url_for('static', filename=p.image_path)}}" width="400" height="400" class="product_info"/>
@@ -16,7 +16,7 @@
                 <br>
                 <h3>{{ "£"+p.cost|string +"0" }}</h3>
                 <br>
-                <form action={{ url_for("shop.checkout", pid=p.product_id) }} method="post">
+                <form action={{ url_for("shop.checkout", pid=p.product_id) }} method="POST">
                     <div class="sizes">
                     <label class="size-check">S
                       <input name="size" type="radio" class="size-check" value="s">
