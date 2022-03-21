@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash
 from app import db
 from models import Products
 
@@ -27,8 +27,21 @@ def shop():
 
 @shop_blueprint.route('/product', methods=['GET'])
 def product_page():
-    pid = request.args.get('prod', None)
+    pid = request.args.get('prod', type=int)
     return render_template("product_page.html", product=get_product(pid))
+
+
+@shop_blueprint.route('/checkout', methods=['POST'])
+def checkout():
+    size = [item for key, item in request.form.items()]
+    print(size)
+    pid = request.args.get("pid", type=int)
+    product = get_product(pid)
+    if not size:
+        flash("You must choose a size!")
+        return render_template("product_page.html", product=product)
+    else:
+        return render_template("checkout.html", item={'size': size[0], 'product':product})
 
 
 def get_product(pid):
@@ -46,7 +59,8 @@ def get_all_items():
             continue
         print(row.image_path)
         d.append(
-            {'product_id': row.product_id, 'path': row.image_path, 'name': row.name, 'colour': row.colour,
+            {'product_id': row.product_id, 'path': row.image_path, 'name': row.name,
+             'colour': row.colour,
              'description': row.description, 'cost': str(row.cost) + "0"})
     return d
 

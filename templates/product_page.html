@@ -16,23 +16,34 @@
                 <br>
                 <h3>{{ "£"+p.cost|string +"0" }}</h3>
                 <br>
-                <div class="sizes">
+                <form action={{ url_for("shop.checkout", pid=p.product_id) }} method="post">
+                    <div class="sizes">
                     <label class="size-check">S
-                      <input name="size" type="radio" class="size-check">
+                      <input name="size" type="radio" class="size-check" value="s">
                     </label>
                     <label class="size-check">M
-                      <input name="size" type="radio" class="size-check">
+                      <input name="size" type="radio" class="size-check" value="m">
                     </label>
                     <label class="size-check">L
-                      <input name="size" type="radio" class="size-check">
+                      <input name="size" type="radio" class="size-check" value="l">
                     </label>
                     <label class="size-check">XL
-                      <input name="size" type="radio" class="size-check">
+                      <input name="size" type="radio" class="size-check" value="xl">
                     </label>
-                </div>
-                <br>
-                <button class="buy-button" type="button"> BUY </button>
-            </div>
+                    </div>
+                    <br>
+                    <button class="buy-button" type="submit"> BUY </button>
+                </form>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <h2 class="flash">
+                  {% for message in messages %}
+                     {{ message }}
+                  {% endfor %}
+                </h2>
+                {% endif %}
+                {% endwith %}
+        </div>
 
         </div>
     {% endwith %}

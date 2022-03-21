@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    {% with item = item %}
+            <body>
+            <h3>
+                {{ item.size+" "+item.product.name}}
+            </h3>
+            </body>
+    {% endwith %}
+{% endblock %}
