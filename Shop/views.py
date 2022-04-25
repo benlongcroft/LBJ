@@ -5,7 +5,6 @@ from Shop.forms import CheckoutForm
 
 shop_blueprint = Blueprint('shop', __name__, template_folder='templates')
 
-
 # def get_item_info():
 #     imgs = []
 #     path = "./static/assets/shop"
@@ -28,8 +27,9 @@ def shop():
 
 @shop_blueprint.route('/product', methods=['GET', 'POST'])
 def product_page():
-    pid = request.args.get('prod', type=int)
-    print(pid)
+    pid = request.args.get("prod")
+    if pid == None:
+        return render_template("error/500.html")
     return render_template("product_page.html", product=get_product(pid))
 
 #

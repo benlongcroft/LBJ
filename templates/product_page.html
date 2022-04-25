@@ -16,8 +16,6 @@
                 <br>
                 <h3>{{ "£"+p.cost|string +"0" }}</h3>
                 <br>
-                <h1>{{ p.product_id }}</h1>
-                <form href="{{ url_for("shop.product_page", prod=p.product_id) }}" METHOD="post" width="400" height="400" class="product_info">
                     <div class="sizes">
                     <label class="size-check">S
                       <input name="size" type="radio" class="size-check" value="s">
@@ -33,8 +31,7 @@
                     </label>
                     </div>
                     <br>
-                    <button class="buy-button" type="submit"> SOLD OUT </button>
-                </form>
+                    <button class="buy-button"> SOLD OUT </button>
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 <h2 class="flash">
