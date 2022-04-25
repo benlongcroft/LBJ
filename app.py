@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from Gallery.views import get_image_set
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///LostBondDB.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -24,19 +24,13 @@ def start():
     return render_template('splash.html')
 
 
-@app.route('/donate')
-def donate():
-    return render_template('donate.html')
-
-
 @app.route('/index')
 def index():
     return render_template('index.html', is_home=True, get_image_set=get_image_set)
 
-
-@app.route('/about')
-def about():
-    return render_template("about.html")
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
 
 
 @app.errorhandler(400)

@@ -26,12 +26,6 @@
                     <a class="navbar-home-item">
                         Contact Us
                     </a>
-                    <a href={{ url_for("about") }} class="navbar-home-item">
-                        Our Story
-                    </a>
-                    <a href="{{ url_for("donate") }}" class="navbar-home-item">
-                        Donate
-                    </a>
             </div>
             {% else %}
               <div class="navbar-default">
@@ -47,12 +41,6 @@
                     </a>
                     <a class="navbar-item">
                         Contact Us
-                    </a>
-                    <a href={{ url_for("about") }} class="navbar-item">
-                        Our Story
-                    </a>
-                    <a href="{{ url_for("donate") }}" class="navbar-item">
-                        Donate
                     </a>
             </div>
             {% endif %}

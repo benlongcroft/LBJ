@@ -12,13 +12,11 @@
     {% endwith %}
     <form method="post">
         <div class="field">
-        <div class="control">
             {{ form.email(class="input", placeholder="Email") }}
             {% for error in form.email.errors %}
                 {{ error }}
             {% endfor %}
         </div>
-    </div>
     </form>
     </body>
 {% endblock %}

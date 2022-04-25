@@ -325,7 +325,7 @@ button.buy-button{
   text-align: center;
   border-radius: 5%;
   display: inline-block;
-  width: 80px;
+  width: 100px;
   height: 40px;
   font-size: 25px;
   font-family: Teko;
@@ -341,20 +341,20 @@ button.buy-button{
   cursor: pointer;
 }
 
-button.buy-button:after{
-  background: #F5F1ED;
-  content: "";
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
+/*button.buy-button:after{*/
+/*  background: #F5F1ED;*/
+/*  content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  padding-top: 300%;*/
+/*  padding-left: 350%;*/
+/*  margin-left: -20px!important;*/
+/*  margin-top: -120%;*/
+/*  opacity: 0;*/
+/*  transition: all 0.8s*/
+/*}*/
 
-button.buy-button:active:after{
+button.buy-button{
   background: #cdcac7;
   padding: 0;
   margin: 0;
@@ -362,14 +362,14 @@ button.buy-button:active:after{
   transition: 0s
 }
 
-button.buy-button:active{
-  background-color: #E06D06;
-}
+/*button.buy-button:active{*/
+/*  background-color: #E06D06;*/
+/*}*/
 
-button.buy-button:hover{
-  background: #E06D06;
-  color: #F5F1ED;
-}
+/*button.buy-button:hover{*/
+/*  background: #E06D06;*/
+/*  color: #F5F1ED;*/
+/*}*/
 
 div.sizes{
   padding: 20px;

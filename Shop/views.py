@@ -26,23 +26,24 @@ def shop():
     return render_template("shop.html", get_shop_images=get_all_items)
 
 
-@shop_blueprint.route('/product', methods=['GET'])
+@shop_blueprint.route('/product', methods=['GET', 'POST'])
 def product_page():
     pid = request.args.get('prod', type=int)
+    print(pid)
     return render_template("product_page.html", product=get_product(pid))
 
-
-@shop_blueprint.route('/checkout', methods=['POST'])
-def checkout():
-    form = CheckoutForm()
-    size = [item for key, item in request.form.items()]
-    pid = request.args.get("pid", type=int)
-    product = get_product(pid)
-    if not size:
-        flash("You must choose a size!")
-        return render_template("product_page.html", product=product)
-    else:
-        return render_template("checkout.html", item={'size': size[0], 'product':product}, form=form)
+#
+# @shop_blueprint.route('/checkout', methods=['POST'])
+# def checkout():
+#     form = CheckoutForm()
+#     size = [item for key, item in request.form.items()]
+#     pid = request.args.get("pid", type=int)
+#     product = get_product(pid)
+#     if not size:
+#         flash("You must choose a size!")
+#         return render_template("product_page.html", product=product)
+#     else:
+#         return render_template("checkout.html", item={'size': size[0], 'product':product}, form=form)
 
 # @shop_blueprint.route("/success", methods=['POST'])
 # def submit_checkout():
@@ -51,7 +52,8 @@ def checkout():
 #         return render_template("checkout.html", item={'size': size[0], 'product':product}, form=form)
 
 def get_product(pid):
-    return Products.query.filter_by(product_id=pid).first()
+    p = Products.query.filter_by(product_id=pid).first()
+    return p
 
 
 def get_all_items():

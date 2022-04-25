@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template
 import os
+
 import random
 from exif import Image
 
@@ -20,16 +21,19 @@ def get_meta(path):
 
 def get_image_set():
     image_set = []
-    files = os.listdir("./static/assets/gallery")
+    static = "./static/assets/gallery"
+    files = os.listdir(static)
     assets_path = "assets/gallery"
     random.shuffle(files)
     for x in range(len(files)):
         img_path = files[x]
         if img_path == ".DS_Store":
             continue
+        # print(img_path)
         p = os.path.join(assets_path, img_path)
         print(p)
-        meta = get_meta("static/"+p)
+        meta = get_meta('static/'+p)
+        # print(meta)
         image_set.append({'path': p, 'name': get_image_name(p), 'description': None, "meta" : meta})
         # TODO: implement this so that description gets shop metadata
     return image_set
