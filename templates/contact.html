@@ -1,10 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+{#    <h1 class="title is-1" style="padding-left: 8%; color: white">Coming Soon</h1>#}
+    <p class="caption" style="color: #F5F1ED">Stay tuned for more info</p>
+    <br>
+    <br>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <h2 class="flash" style="color: red; font-weight: bold; font-size: 20px; padding-left: 8%">
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+    </h2>
+    {% endif %}
+    {% endwith %}
+    <form class="column is-5 is-offset-4" method="post">
+        <div class="field">
+                {{ form.firstname(class="control", placeholder="First Name") }}
+                <h2 class="flash">
+                {% for error in form.firstname.errors %}
+                    {{ error }}
+                {% endfor %}
+                </h2>
+        </div>
+        <div class="field">
+                {{ form.lastname(class="control", placeholder="Last Name") }}
+                <h2 class="flash">
+                {% for error in form.lastname.errors %}
+                    {{ error }}
+                {% endfor %}
+                </h2>
+        </div>
+        <div class="field">
+            {{ form.csrf_token() }}
+            {{ form.email(class="control", type="email", placeholder="Email") }}
+            <h2 class="flash">
+            {% for error in form.email.errors %}
+                {{ error }}
+            {% endfor %}
+            </h2>
+        </div>
+        <div class="field">
+                {{ form.telephone(class="control", type="tel", placeholder="Telephone") }}
+                <h2 class="flash">
+                {% for error in form.telephone.errors %}
+                    {{ error }}
+                {% endfor %}
+                </h2>
+        </div>
+        <div class="field">
+            {{ form.message(class="control-text-area", rows="10", placeholder="Message") }}
+            <h2 class="flash">
+              {% for error in form.message.errors %}
+                {{ error }}
+              {% endfor %}
+            </h2>
+        </div>
+        <div class="field">
+             {{ form.submit(class="b-control", style="width: 50%; height: 60px; background-color: ") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

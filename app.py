@@ -13,10 +13,11 @@ db = SQLAlchemy(app)
 
 from Shop.views import shop_blueprint
 from Gallery.views import gallery_blueprint
+from Contact.views import contact_blueprint
 
 app.register_blueprint(shop_blueprint)
 app.register_blueprint(gallery_blueprint)
-
+app.register_blueprint(contact_blueprint)
 
 # HOME PAGE VIEW
 @app.route('/')
@@ -27,10 +28,6 @@ def start():
 @app.route('/index')
 def index():
     return render_template('index.html', is_home=True, get_image_set=get_image_set)
-
-@app.route('/contact')
-def contact():
-    return render_template("contact.html")
 
 
 @app.errorhandler(400)

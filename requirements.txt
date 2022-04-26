@@ -5,3 +5,4 @@ exif
 flask_wtf
 wtforms
 flask
+email-validator
